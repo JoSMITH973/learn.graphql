@@ -1,7 +1,7 @@
 # learn.graphql
 
 ### Exo :
-#### 🕑 Register
+#### ✅ Register
 #### 🕑 Create a post
 #### 🕑 Read all the posts
 #### 🕑 Read a post by It's ID

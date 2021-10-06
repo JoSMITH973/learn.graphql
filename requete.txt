@@ -1,0 +1,23 @@
+## Reqûete pour récupérer les Users dans la base de données
+
+query Query {
+  users {
+    id
+    email
+    password
+    firstName
+    lastName
+  }
+}
+
+## Requête mutation User
+
+mutation addUser {
+  addUser(email: "alexandre.bouzon@efrei.net", password: "codeCode", firstName: "Alexandre", lastName: "BOUZON") {
+    email
+    password
+    firstName
+    lastName
+  }
+}
+
