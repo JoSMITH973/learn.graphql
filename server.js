@@ -24,6 +24,7 @@ const typeDefs = gql`
     
     type Mutation {
         addUser(email:String, password:String, firstName:String, lastName:String): User
+        createPost(authorId:Int, comments:String, content:String, createdAt:String): Post
     }
 
     type User {
@@ -53,6 +54,9 @@ const resolvers = {
     Mutation: {
         addUser: async (_, args, { dataSources }) => {
             return dataSources.db.Register(args)
+        },
+        createPost: async (_, args, { dataSources }) => {
+            return dataSources.db.createPost(args)
         }
     }
 };

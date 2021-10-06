@@ -8,8 +8,16 @@ class MyDatabase extends SQLDataSource {
     }
 
     Register(req) {
-        console.log(req);
         return this.knex("Users").insert({
+            email: req.email,
+            password: req.password,
+            firstName: req.firstName,
+            lastName: req.lastName
+        });
+    }
+
+    createPost(req) {
+        return this.knex("Posts").insert({
             email: req.email,
             password: req.password,
             firstName: req.firstName,
